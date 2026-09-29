@@ -1,0 +1,2 @@
+import { sqliteTable, text, integer } from 'drizzle-orm/sqlite-core';
+export const reservations=sqliteTable('reservations',{id:text('id').primaryKey(),name:text('name').notNull(),email:text('email').notNull(),date:text('date').notNull(),time:text('time').notNull(),guests:integer('guests').notNull(),seating:text('seating').notNull(),notes:text('notes').notNull(),status:text('status').notNull().default('requested'),createdAt:text('created_at').notNull()});
